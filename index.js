@@ -1,2 +1,1 @@
-const prompt = require('lib/prompt.js');
-
+const prompt = require('./lib/prompt.js');
