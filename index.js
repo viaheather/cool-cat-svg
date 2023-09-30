@@ -2,7 +2,7 @@ const { writeFile } = require('fs').promises;
 const inquirer = require('inquirer');
 const { Triangle, Square, Circle } = require("./lib/shapes");
 
-const propmtUser = () => {
+const promptUser = (answers) => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -21,13 +21,24 @@ const propmtUser = () => {
     ])
 }
 
-const generateSVG = ({initials, color, shape}) => ;
+const generateSVG = ({ initials, color, shape }) =>
+`
+<svg>
+${shape} ${color} ${initials} />;
+</svg>`
+    ;
 
+// If answer length is less than 3 characters, then logo.svg will be written from the user answers
 const init = () => {
-    userPrompt()
-      .then((answers) => writeFile('logo.svg', generateSVG(answers)))
-      .then(() => console.log('Successfully created your logo.'))
-      .catch((err) => console.error(err));
-  };
-  
-  init();  
+    promptUser()
+        .then((answers) => {
+            if (answers.initials.length > 3) {
+                console.log("Your initials must be 2-3 characters max.");
+            } else {
+                writeFile('logo.svg', generateSVG(answers))
+            }
+        })
+        .catch((err) => console.error(err));
+}
+
+init();  
