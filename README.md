@@ -3,6 +3,7 @@
 
 ## Video Walkthrough (View Raw)
 ![Click View Raw to download the video walkthrough](examples/instruction.png)
+
 Download the walkthrough video here: https://github.com/viaheather/cool-cat-svg/blob/main/examples/video.mp4
 
 ## Description
