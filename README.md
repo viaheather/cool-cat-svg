@@ -3,6 +3,7 @@
 
 ## Video Walkthrough (View Raw)
 ![Click View Raw to download the video walkthrough](examples/instruction.png)
+Download the walkthrough video here: https://github.com/viaheather/cool-cat-svg/blob/main/examples/video.mp4
 
 ## Description
 If you don't feel like exploiting graphic designers for their quality work, then you can use this logo generator for your personal or business needs.
